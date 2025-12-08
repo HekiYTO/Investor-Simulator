@@ -12,6 +12,10 @@ main {
     padding: 3% 0;
 }
 
+.main {
+    min-height: 95vh;
+}
+
 header {
     background-color: #000000;
     border-bottom: #0f886c 2px solid;
