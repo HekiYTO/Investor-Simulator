@@ -6,7 +6,7 @@ let euroValue = 0
 let euroBalance = 0
 let euroPrevious = null;
 
-let coins = 1000;
+let coins = 150;
 let start = 0;
 let debug = 1;
 
