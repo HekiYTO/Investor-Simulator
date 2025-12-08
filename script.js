@@ -6,11 +6,14 @@ let euroValue = 0
 let euroBalance = 0
 let euroPrevious = null;
 
-let coins = 100;
+let coins = 1000;
 let start = 0;
 let debug = 1;
 
 let buisness1 = 0
+let buisness2 = 0
+
+let okosko = "";
 
 let images = {
     inc: './images/increase.png',
@@ -316,6 +319,16 @@ function allEuro(buy) {
 
 //Buisness//
 
+function shopOpen() {
+    let element = document.querySelector('.buyBuisness')
+    element.classList.add('is-open')
+}
+
+function shopClose() {
+    let element = document.querySelector('.buyBuisness')
+    element.classList.remove('is-open')
+}
+
 function invest1(action) {
     if (action == 'buy') {
         let cost = 300;
@@ -328,6 +341,22 @@ function invest1(action) {
     }
     if (action == 'cycle' && buisness1 == 1) {
         coins = coins + 1;
+    }
+    valuesUpdate();
+}
+
+function invest2(action) {
+    if (action == 'buy') {
+        let cost = 1500;
+        if (coins >= cost) {
+            coins = coins - cost
+            buisness2 = 1
+            buttonBuyBuisness2.innerHTML = 'Лимонадная стойка <br> Куплено <br> 5к/2.5с'
+            buttonBuyBuisness2.className = 'unbaviable'
+        }
+    }
+    if (action == 'cycle' && buisness2 == 1) {
+        coins = coins + 5;
     }
     valuesUpdate();
 }
@@ -363,8 +392,18 @@ buttonSellAllEuro.addEventListener('click', () => allEuro(false));
 
 //Buisness//
 
+let buttonShopOpen = document.getElementById('kolomoyShop')
+buttonShopOpen.addEventListener('click', shopOpen)
+
+let buttonShopClose = document.getElementById('closeOverlay1')
+buttonShopClose.addEventListener('click', shopClose)
+
 let buttonBuyBuisness1 = document.getElementById('buttonBuisness1')
 buttonBuyBuisness1.addEventListener('click', () => invest1('buy'))
+
+let buttonBuyBuisness2 = document.getElementById('buttonBuisness2')
+buttonBuyBuisness2.addEventListener('click', () => invest2('buy'))
+
 
 //Update all values//
 
@@ -384,5 +423,12 @@ function valuesUpdate() {
 
 valuesUpdate();
 
+//textline generator//
+
+let textline = document.getElementById('okoskoText')
+
+textline.textContent = "Коломойский сбежал из приват банка"
+
 //Buisness cycle//
 setInterval(invest1, 2500, 'cycle');
+setInterval(invest2, 2500, 'cycle');

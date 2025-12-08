@@ -10,11 +10,23 @@
     
     <header>
         <h1>Симулятор Инвестиций</h1>
+        <div class="shops">
+            <div class="kolomoyskiyShop">
+                <button id="kolomoyShop" class="shop-button">
+                    <img class="kolomoyskiyimg" src="images/BuyBuisness.png" alt="">
+                    <p>Купить бизнесс</p>
+                </button>
+            </div>
+        </div>
     </header>
+
+
 
     <main>
         <div class="container">
-
+                <div class="textline none">
+                    <h3 id="okoskoText"></h3>
+                </div>
             <div class="head">
                 <div id="coinsBalance"></div>
                 <div class="costUpdate"></div>
@@ -34,14 +46,14 @@
 
                     <div class="buySellCont">
                         <div class="ccardBuy">
-                             <button class="buyAllDollar btnall">КУПИТЬ ВСЁ</button>
-                            <button class="buyDollar btnnotall">КУПИТЬ</button>
+                             <button class="buyAllDollar buy-sellButton btnall">КУПИТЬ ВСЁ</button>
+                            <button class="buyDollar buy-sellButton btnnotall">КУПИТЬ</button>
                            
                             <input placeholder="Сколько нужно купить" type="text" class="dollarToBuy ccinput">
                         </div>
                         <div class="ccardSell">
-                            <button class="sellAllDollar btnall">ПРОДАТЬ ВСЁ</button>
-                            <button class="sellDollar btnnotall">ПРОДАТЬ</button>
+                            <button class="sellAllDollar buy-sellButton btnall">ПРОДАТЬ ВСЁ</button>
+                            <button class="sellDollar buy-sellButton btnnotall">ПРОДАТЬ</button>
                             
                             <input placeholder="Сколько нужно продать" type="text" class="dollarToSell ccinput">
                         </div>
@@ -60,25 +72,20 @@
 
                     <div class="buySellCont">
                         <div class="ccardBuy">
-                            <button class="buyAllEuro btnall">КУПИТЬ ВСЁ</button>
-                            <button class="buyEuro btnnotall">КУПИТЬ</button>
+                            <button class="buyAllEuro buy-sellButton btnall">КУПИТЬ ВСЁ</button>
+                            <button class="buyEuro buy-sellButton btnnotall">КУПИТЬ</button>
                             <input placeholder="Сколько нужно купить" type="text" class="euroToBuy ccinput">
                         </div>
                         <div class="ccardSell">
-                            <button class="sellAllEuro btnall">ПРОДАТЬ ВСЁ</button>
-                            <button class="sellEuro btnnotall">ПРОДАТЬ</button>
+                            <button class="sellAllEuro buy-sellButton btnall">ПРОДАТЬ ВСЁ</button>
+                            <button class="sellEuro buy-sellButton btnnotall">ПРОДАТЬ</button>
                             <input placeholder="Сколько нужно продать" type="text" class="euroToSell ccinput">
                         </div>
                     </div>
                 </div>
 
             </div>
-            <div class="buisness">
-                <h2>Бизнесы</h2>
-                <div class="bSection">
-                    <button id="buttonBuisness1" class="baviable">Продажа камней<br> 300 коинов<br>+ 1к/2.5с</button>
-                </div>
-            </div>
+           
 
         </div>
         
@@ -86,7 +93,25 @@
     </main>
 
 
-    <script src="script.js"></script>
+    
 
 </body>
+
+    <div class="buyBuisness">
+        <div class="overlay1cont">
+            <div class="buisness">
+                <div class="headeroverlay1">
+                     <h2>Бизнесы</h2>
+                     <button id="closeOverlay1">X</button>
+                </div>
+                   
+                        <div class="bSection">
+                            <button id="buttonBuisness1" class="baviable">Продажа камней<br> 300 коинов<br>+ 1к/2.5с</button>
+                            <button id="buttonBuisness2" class="baviable">Лимонадная стойка<br> 1500 коинов<br>+ 5к/2.5с</button>
+                        </div>
+            </div>
+        </div>           
+    </div>
+
+<script src="script.js"></script>
 </html>

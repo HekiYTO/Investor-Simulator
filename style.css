@@ -8,19 +8,19 @@
 }
 
 main {
-    background-color: #5CDB95;
+    background-color: #111111;
     padding: 3% 0;
 }
 
 header {
-    background-color: #379683;
+    background-color: #000000;
     border-bottom: #0f886c 2px solid;
     color: white;
 }
 
 .currencyZone {
     gap: 30px;
-    background-color: #8EE4AF;
+    background-color: #1C1C1C;
     width: 80%;
     margin: 3% auto;
     padding: 2%;
@@ -31,11 +31,15 @@ header {
     
 }
 
+#coinsBalance {
+    color: white;
+}
+
 .currencyCard {
-    background-color: #05386B;
+    background-color: #262626;
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 50%;
     gap: 30px;
     text-align: center;
     padding: 2% 0;
@@ -78,11 +82,11 @@ header {
     margin: 0 auto;
 }
 
-button {
+.buy-sellButton {
     color: #fff;
     font-size: 20px;
     padding: 10px 25px;
-    background-color: #379683;
+    background-color: #096852;
     border: 2px #0d5846 solid;
     transition: 0.3s ease-out;
 }
@@ -120,6 +124,16 @@ h1 {
     padding: 0;
 }
 
+.baviable {
+    transition: 0.2s ease-out;
+    font-size: 16px;
+    font-weight: 500;
+    border: #064b3b solid 2px;
+    padding: 10px 20px;
+    background-color: #0f886c;
+}
+
+
 .unbaviable:hover {
     cursor: default;
     transform: none;
@@ -127,8 +141,122 @@ h1 {
 
 .unbaviable {
     transition: none;
+    transition: 0.2s ease-out;
+    font-size: 16px;
+    font-weight: 500;
+    border: #064b3b solid 2px;
+    padding: 10px 20px;
+    background-color: #0f886c;
 }
 
+.buyBuisness {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-out;
+    transform: translateX(-100%);
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.buisness {
+    padding: 5%;
+}
+
+.overlay1cont {
+    width: 90%;
+    height: 90%;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buyBuisness.is-open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.kolomoyskiyShop {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.kolomoyskiyimg {
+    width: 64px;
+    height: auto;
+}
+
+.shops {
+    padding: 0 5%;
+}
+
+.shop-button {
+    transition: 0.2s ease-out;
+    border: 2px solid #064b3b;
+    background-color: #096852;
+    border-radius: 2px;
+    padding: 5px 10px;
+}
+
+.headeroverlay1 {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+#closeOverlay1 {
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    background-color: #096852;
+    border: none;
+    border-radius: 50%;
+}
+
+.textline {
+    
+    text-align: center;
+    border: 2px black solid;
+    width: 40%;
+    background-color: rgb(231, 231, 231);
+    padding: 5px 0;
+    margin: 0 auto;
+}
+
+.overlay1cont::after {
+  content: "";
+  position: absolute;
+  inset: 0;      
+  background-image: url(images/BuyBuisness.png);              
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.35); 
+  background-blend-mode: overlay;    
+  opacity: 0.25;               
+  pointer-events: none;      
+  z-index: 0;                  
+}
+
+.buisness {
+  position: relative; 
+  z-index: 1;
+}
+
+.none {
+    display: none;
+}
 
 @media screen and (max-width: 767px) {
     .currencyZone {
@@ -149,4 +277,23 @@ h1 {
         justify-content: center;
         align-items: center;
     }
+
+    .headeroverlay1 {
+        justify-content: space-between;
+    }
+
+    #closeOverlay1 {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+     .headeroverlay1 {
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    }
 }
+
+
+
