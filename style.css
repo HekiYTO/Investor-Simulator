@@ -258,6 +258,10 @@ h1 {
   z-index: 1;
 }
 
+.h2ho1 {
+    color: white;
+}
+
 .none {
     display: none;
 }
@@ -272,6 +276,7 @@ h1 {
     }
 
     h1 {
+        padding: 10px 20px;
         text-align: center;
     }
 
