@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poiret+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+     font-family: "Mulish", sans-serif;
+}
+
+main {
+    background-color: #5CDB95;
+    padding: 3% 0;
+}
+
+header {
+    background-color: #379683;
+    border-bottom: #0f886c 2px solid;
+    color: white;
+}
+
+.currencyZone {
+    gap: 30px;
+    background-color: #8EE4AF;
+    width: 80%;
+    margin: 3% auto;
+    padding: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.currencyCard {
+    background-color: #05386B;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 30px;
+    text-align: center;
+    padding: 2% 0;
+    border-radius: 10px;
+}
+
+.currencyCard div, .currencyCard h2 {
+    color: #ffffff;
+}
+
+.ccardBuy, .ccardSell {
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1% 0;
+}
+
+.buySellCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ccardBuy, .ccardSell {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+button {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    background-color: #379683;
+    border: 2px #0d5846 solid;
+    transition: 0.3s ease-out;
+}
+
+button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.ccinput {
+    width: 50%;
+    height: 36px;
+    font-size: 20px;
+    border: none;
+    height: auto;
+    outline: none;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.ccinput::placeholder {
+    font-size: 11px;
+}
+
+h1 {
+    padding: 20px 100px;
+}
+
+#euroChangeImg {
+    width: 64px;
+    height: 64px;
+}
+
+.btnnotall {
+    padding: 0;
+}
+
+.unbaviable:hover {
+    cursor: default;
+    transform: none;
+}
+
+.unbaviable {
+    transition: none;
+}
+
+
+@media screen and (max-width: 767px) {
+    .currencyZone {
+        flex-direction: column;
+    }
+
+    .currencyCard {
+        width: 100%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .buisness {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
