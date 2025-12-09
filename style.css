@@ -266,6 +266,10 @@ h1 {
     display: none;
 }
 
+.blackText {
+    color: black;
+}
+
 @media screen and (max-width: 767px) {
     .currencyZone {
         flex-direction: column;
@@ -303,6 +307,7 @@ h1 {
     width: 100%;
     }
 }
+
 
 
 
