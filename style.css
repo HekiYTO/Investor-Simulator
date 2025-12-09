@@ -171,7 +171,7 @@ h1 {
 }
 
 .buisness {
-    padding: 5%;
+    padding: 2% 5% 2% 5%;
 }
 
 .overlay1cont {
@@ -181,6 +181,12 @@ h1 {
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+}
+
+.buisnessUpgrade {
+    z-index: 1;
+    padding: 1% 0 1% 5%;
+    position: relative;
 }
 
 .buyBuisness.is-open {
@@ -260,6 +266,7 @@ h1 {
 
 .h2ho1 {
     color: white;
+    padding-bottom: 1.5%;
 }
 
 .none {
@@ -305,6 +312,13 @@ h1 {
     justify-content: space-between;
     display: flex;
     width: 100%;
+    }
+
+    .buSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
 

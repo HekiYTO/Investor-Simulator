@@ -10,8 +10,10 @@ let coins = 150;
 let start = 0;
 let debug = 1;
 
-let buisness1 = 0
-let buisness2 = 0
+let buisness1 = 0;
+let buisness1upg = 0;
+let buisness2 = 0;
+let buisness2upg = 0;
 
 let okosko = "";
 
@@ -341,6 +343,9 @@ function invest1(action) {
     }
     if (action == 'cycle' && buisness1 == 1) {
         coins = coins + 1;
+        if (buisness1upg == 1) {
+            coins = coins + 3
+        }
     }
     valuesUpdate();
 }
@@ -357,7 +362,34 @@ function invest2(action) {
     }
     if (action == 'cycle' && buisness2 == 1) {
         coins = coins + 5;
+        if (buisness2upg == 1) {
+            coins = coins + 15
+        }
     }
+    valuesUpdate();
+}
+
+//Buisness upgrades//
+
+function invest1upg() {
+        let cost = 1000;
+        if (coins >= cost) {
+            coins = coins - cost;
+            buisness1upg = 1;
+            buttonBuyBuisness1upg.innerHTML = 'Каменоломня <br> Куплено <br> 4х множитель для "Продажи камней';
+            buttonBuyBuisness1upg.className = 'unbaviable';
+        }
+    valuesUpdate();
+}
+
+function invest2upg() {
+        let cost = 5000;
+        if (coins >= cost) {
+            coins = coins - cost
+            buisness2upg = 1
+            buttonBuyBuisness2upg.innerHTML = 'Рaсширить сеть лимонадных стоек <br> Куплено <br> 4х множитель для "Лимонадная стойка'
+            buttonBuyBuisness2upg.className = 'unbaviable'
+        }
     valuesUpdate();
 }
 
@@ -401,8 +433,15 @@ buttonShopClose.addEventListener('click', shopClose)
 let buttonBuyBuisness1 = document.getElementById('buttonBuisness1')
 buttonBuyBuisness1.addEventListener('click', () => invest1('buy'))
 
+let buttonBuyBuisness1upg = document.getElementById('buttonUpgBuisness1')
+buttonBuyBuisness1upg.addEventListener('click', invest1upg);
+
 let buttonBuyBuisness2 = document.getElementById('buttonBuisness2')
 buttonBuyBuisness2.addEventListener('click', () => invest2('buy'))
+
+let buttonBuyBuisness2upg = document.getElementById('buttonUpgBuisness2')
+buttonBuyBuisness2upg.addEventListener('click', invest2upg);
+
 
 
 //Update all values//
