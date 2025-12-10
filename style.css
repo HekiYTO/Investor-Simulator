@@ -48,6 +48,10 @@ header {
     text-align: center;
     padding: 2% 0;
     border-radius: 10px;
+      box-shadow:
+    5px 4px rgba(0,0,0,0.12),
+    10px 9px 10px rgba(0, 0, 0, 0.1);        
+
 }
 
 .currencyCard div, .currencyCard h2 {
@@ -93,9 +97,11 @@ header {
     background-color: #096852;
     border: 2px #0d5846 solid;
     transition: 0.3s ease-out;
+    box-shadow: 2px 2px  rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -170,6 +176,23 @@ h1 {
     pointer-events: none;
 }
 
+.infoBuro {
+     z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.5s ease-out;
+    transform: translateX(-100%);
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
 .buisness {
     padding: 2% 5% 2% 5%;
 }
@@ -183,13 +206,22 @@ h1 {
     overflow: hidden;
 }
 
+.overlay2cont {
+    width: 60%;
+    height: 90%;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
 .buisnessUpgrade {
     z-index: 1;
     padding: 1% 0 1% 5%;
     position: relative;
 }
 
-.buyBuisness.is-open {
+.buyBuisness.is-open, .infoBuro.is-open {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
@@ -200,6 +232,7 @@ h1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    gap: 1%;
 }
 
 .kolomoyskiyimg {
@@ -225,11 +258,20 @@ h1 {
     justify-content:space-between;
 }
 
-#closeOverlay1 {
+.headeroverlay2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3%;
+}
+
+#closeOverlay1, #closeOverlay2 {
+    transition: 0.2s ease;
+    color: white;
     width: 64px;
     height: 64px;
     font-size: 32px;
-    background-color: #096852;
+    background-color: transparent;
     border: none;
     border-radius: 50%;
 }
@@ -259,6 +301,26 @@ h1 {
   z-index: 0;                  
 }
 
+.overlay2cont::after {
+  content: "";
+  position: absolute;
+  inset: 0;      
+  background-image: url(images/InfoBuroClearBG.png);              
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0.35); 
+  background-blend-mode: overlay;    
+  opacity: 0.25;               
+  pointer-events: none;      
+  z-index: 0;                  
+}
+
+.infoBuroSection {
+    z-index: 1;
+    position: relative;
+}
+
 .buisness {
   position: relative; 
   z-index: 1;
@@ -275,6 +337,24 @@ h1 {
 
 .blackText {
     color: black;
+}
+
+#closeOverlay1:hover, #closeOverlay2:hover {
+    box-shadow: none;
+    transform: scale(1);
+}
+
+.infosections {
+    color: #fff;
+    padding: 1% 5% 0 5%;
+}
+
+.insfp::first-letter {
+ padding-left: 2%;
+}
+
+.insfh3 {
+    padding: 1% 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -319,6 +399,10 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .overlay2cont {
+        width: 90%;
     }
 }
 

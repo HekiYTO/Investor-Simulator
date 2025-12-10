@@ -369,7 +369,24 @@ function invest2(action) {
     valuesUpdate();
 }
 
+
+//Info Buro//
+
+function infoBuroOpen() {
+    let element = document.querySelector('.infoBuro')
+    element.classList.add('is-open')
+}
+
+function infoBuroClose() {
+    let element = document.querySelector('.infoBuro')
+    element.classList.remove('is-open')
+}
+
+
+
 //Buisness upgrades//
+
+
 
 function invest1upg() {
         let cost = 1000;
@@ -442,7 +459,13 @@ buttonBuyBuisness2.addEventListener('click', () => invest2('buy'))
 let buttonBuyBuisness2upg = document.getElementById('buttonUpgBuisness2')
 buttonBuyBuisness2upg.addEventListener('click', invest2upg);
 
+//InfoBuro//
 
+let buttonInfoBuroOpen = document.getElementById('infoBuroButton')
+buttonInfoBuroOpen.addEventListener('click', infoBuroOpen)
+
+let buttonInfoBuroClose = document.getElementById('closeOverlay2')
+buttonInfoBuroClose.addEventListener('click', infoBuroClose)
 
 //Update all values//
 
