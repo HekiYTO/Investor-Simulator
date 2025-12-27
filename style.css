@@ -76,13 +76,13 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 .ccardBuy, .ccardSell {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
 .container {
@@ -209,7 +209,7 @@ h1 {
 
 .overlay2cont {
     width: 60%;
-    height: 90%;
+    height: 90vh;
     background-color: #1c1c1c;
     border-radius: 15px;
     position: relative;

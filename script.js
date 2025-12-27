@@ -6,7 +6,7 @@ let euroValue = 0
 let euroBalance = 0
 let euroPrevious = null;
 
-let coins = 150;
+let coins = 100000;
 let start = 0;
 let debug = 1;
 
@@ -494,3 +494,6 @@ textline.textContent = "Коломойский сбежал из приват б
 //Buisness cycle//
 setInterval(invest1, 2500, 'cycle');
 setInterval(invest2, 2500, 'cycle');
+
+//Local saves//
+
